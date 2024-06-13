@@ -21,3 +21,17 @@ driver.findElement(By.cssSelector("input[type="radio"]"));
 driver.findElement(By.cssSelector(".btn.btn-lg.btn-info");
 
 ---------------------------------------------------------------------------------------
+
+Text Matching
+
+-Prefix ^
+<div id="textField_randomId">
+driver.findElement(By.cssSelector("div[id^="textField"]"));
+
+-Suffix $
+<div id="randomId_textField">
+driver.findElement(By.cssSelector("div[id$="textField"]"));
+
+-Substring *
+<div id="123_textField_randomId">
+driver.findElement(By.cssSelector("div[id*="textField"]"));
