@@ -1,0 +1,23 @@
+By CSS Selector
+
+<input id="q" class="q" name="q">
+
+driver.findElement(By.cssSelector("#q"));
+driver.findElement(By.cssSelector(".q"));
+driver.findElement(By.cssSelector("input[name="q"]"));
+
+
+
+-Combine multiple CSS Attributes
+
+
+<input id="q" type="text">
+driver.findElement(By.cssSelector("input#q"));
+
+<input type="radio" value="radio button">
+driver.findElement(By.cssSelector("input[type="radio"]"));
+
+<button type="button" class="btn btn-lg btn-info">
+driver.findElement(By.cssSelector(".btn.btn-lg.btn-info");
+
+---------------------------------------------------------------------------------------
