@@ -18,7 +18,18 @@ driver.findElement(By.cssSelector("input#q"));
 driver.findElement(By.cssSelector("input[type="radio"]"));
 
 <button type="button" class="btn btn-lg btn-info">
-driver.findElement(By.cssSelector(".btn.btn-lg.btn-info");
+driver.findElement(By.cssSelector(".btn.btn-lg.btn-info"));
+
+
+-Wildcards
+
+
+<ul id="list">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+</ul>
+driver.findElement(By.cssSelector("#list li:nth-child(1)"));
 
 ---------------------------------------------------------------------------------------
 
