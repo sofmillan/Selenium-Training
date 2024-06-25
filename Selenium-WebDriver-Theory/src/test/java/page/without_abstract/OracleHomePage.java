@@ -1,4 +1,4 @@
-package page;
+package page.without_abstract;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
