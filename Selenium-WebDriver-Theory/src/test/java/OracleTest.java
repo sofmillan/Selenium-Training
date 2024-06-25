@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import page.OracleHomePage;
 
 import java.time.Duration;
 import java.util.List;
@@ -24,7 +25,7 @@ public class OracleTest {
 
     @Test
     public void commonSearchTermResultsAreNotEmpty() throws InterruptedException {
-        driver.get("https://docs.oracle.com/en/");
+    /*    driver.get("https://docs.oracle.com/en/");
 
         WebElement searchInput = waitForElementLocatedBy(driver, By.id("search-bar-input"));
         searchInput.sendKeys("java");
@@ -33,7 +34,14 @@ public class OracleTest {
         Thread.sleep(3000);
         List<WebElement> searchResults = driver.findElements(By.cssSelector(".card-bg.card-small.oj-conveyorbelt-item"));
         System.out.println(searchResults.size());
-        assertTrue(searchResults.size()>0);
+        assertTrue(searchResults.size()>0);*/
+
+        int expectedSearchResultsNumber = new OracleHomePage(driver)
+                .openPage()
+                .searchForTerms("java")
+                .countResultsNumberWithSearchTerm();
+
+        assertTrue(expectedSearchResultsNumber > 0);
     }
 
     @AfterEach
