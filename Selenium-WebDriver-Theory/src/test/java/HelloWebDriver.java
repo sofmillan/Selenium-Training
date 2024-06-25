@@ -1,4 +1,4 @@
-import org.openqa.selenium.By;
+/*import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,33 +8,33 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;*/
 
 public class HelloWebDriver {
     public static void main(String[] args) throws InterruptedException {
-        ChromeOptions options = new ChromeOptions();
+   /*     ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
         WebDriver driver = new ChromeDriver(options);
-/*
+*//*
         driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
         driver.manage().timeouts().setScriptTimeout(15, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-*/
+*//*
 
 
         driver.get("https://www.google.com.co/");
 
         //Explicit
-/*
+*//*
         new WebDriverWait(driver, 10).until(CustomConditions.jQueryAJAXsCompleted());
-*/
+*//*
 
-   /*     new WebDriverWait(driver, 10)
-                .until(ExpectedConditions.presenceOfElementLocated(By.id("APjFqb")));*/
+   *//*     new WebDriverWait(driver, 10)
+                .until(ExpectedConditions.presenceOfElementLocated(By.id("APjFqb")));*//*
 
-/*
+*//*
         WebElement searchInput = driver.findElement(By.id("APjFqb"));
-*/
+*//*
 
         WebElement searchInput = waitForElementLocatedBy(driver, By.id("APjFqb"));
 
@@ -42,8 +42,8 @@ public class HelloWebDriver {
         searchInput.sendKeys("Stray kids");
         //findElements returns a list of web elements, it can be empty, no exception is nothing if found
         //findElement returns the first found element, not nullable, if nothing found an exception is thrown
-     /*   WebElement searchBtn = driver.findElement(By.id("search-icon-legacy"));
-        searchBtn.click();*/
+     *//*   WebElement searchBtn = driver.findElement(By.id("search-icon-legacy"));
+        searchBtn.click();*//*
         searchInput.sendKeys(Keys.ENTER);
 
 
@@ -76,7 +76,7 @@ public class HelloWebDriver {
     }
 
     //Fluent waits give more flexibility
-    /*
+    *//*
     *
     * Wait<WebDriver> wait = new FluentWait<>(driver)
     * .withTimeout(Duration.ofSeconds(15))
@@ -84,11 +84,11 @@ public class HelloWebDriver {
     * .ignoring(NoSuchElementException.class)
     * .ignoring(StaleElementReferenceException.class)
     * .withMessage("Timeout for waiting search result list was exceeded")
-    * */
+    * *//*
 
     //Implicit waits
     // driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     //side effects for other waits
     //can slow down the test
-    //will wait till the maximim value of timeout
-}
+    //will wait till the maximim value of timeout*/
+}}
